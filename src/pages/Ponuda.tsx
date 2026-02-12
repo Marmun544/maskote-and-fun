@@ -5,8 +5,8 @@ import PricingCTA from "@/components/PricingCTA";
 import stitchImg1 from "@/assets/stitch-mascot-1.jpg";
 import stitchImg2 from "@/assets/stitch-mascot-2.jpg";
 import stitchImg4 from "@/assets/stitch-mascot-4.jpg";
-import subsoccerImg from "@/assets/subsoccer-table.jpg";
-import customImg from "@/assets/stitch-mascot-3.jpg";
+import subsoccerImg from "@/assets/subsoccer-table-2.jpg";
+import customImg from "@/assets/custom-mascots.jpg";
 
 const Ponuda = () => (
   <main className="pt-24">
