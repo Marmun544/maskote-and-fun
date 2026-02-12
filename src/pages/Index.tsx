@@ -7,9 +7,9 @@ import PricingCTA from "@/components/PricingCTA";
 const Index = () => (
   <main>
     <Hero />
-    <WhyUs />
     <ServicesPreview />
     <WhoItsFor />
+    <WhyUs />
     <PricingCTA />
   </main>
 );
