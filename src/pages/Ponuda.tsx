@@ -4,8 +4,8 @@ import { CalendarCheck, MessageCircle, CheckCircle } from "lucide-react";
 import PricingCTA from "@/components/PricingCTA";
 import stitchImg1 from "@/assets/stitch-mascot-1.jpg";
 import stitchImg2 from "@/assets/stitch-mascot-2.jpg";
-import stitchImg4 from "@/assets/stitch-mascot-4.jpg";
 import subsoccerImg from "@/assets/subsoccer-table-2.jpg";
+import subsoccerImg2 from "@/assets/stitch-mascot-4.jpg";
 import customImg from "@/assets/custom-mascots.jpg";
 
 const Ponuda = () => (
@@ -43,7 +43,6 @@ const Ponuda = () => (
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="grid grid-cols-2 gap-3">
             <img src={stitchImg1} alt="Stitch maskota" className="rounded-2xl w-full h-48 object-cover" />
             <img src={stitchImg2} alt="Stitch maskota" className="rounded-2xl w-full h-48 object-cover" />
-            <img src={stitchImg4} alt="Stitch maskota" className="rounded-2xl w-full h-48 object-cover col-span-2 h-56" />
           </motion.div>
         </div>
       </div>
@@ -53,8 +52,9 @@ const Ponuda = () => (
     <section className="py-20 bg-muted">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-2 lg:order-1">
-            <img src={subsoccerImg} alt="SubSoccer stol" className="rounded-2xl w-full h-80 object-cover shadow-lg" />
+          <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-2 lg:order-1 grid grid-cols-1 gap-3">
+            <img src={subsoccerImg} alt="SubSoccer stol" className="rounded-2xl w-full h-56 object-cover shadow-lg" />
+            <img src={subsoccerImg2} alt="SubSoccer na travi" className="rounded-2xl w-full h-56 object-cover shadow-lg" />
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-1 lg:order-2">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Najam <span className="text-primary">SubSoccer stola</span></h2>

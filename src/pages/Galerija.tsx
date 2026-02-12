@@ -19,7 +19,7 @@ type Category = "Sve" | "Maskote" | "SubSoccer" | "Rođendani" | "Eventi";
 const photos: { src: string; alt: string; cat: Category[] }[] = [
   { src: img1, alt: "Stitch maskota", cat: ["Maskote"] },
   { src: img2, alt: "Stitch maskota pozira", cat: ["Maskote"] },
-  { src: img3, alt: "Maskota s djecom", cat: ["Maskote"] },
+  { src: img3, alt: "SubSoccer na livadi", cat: ["SubSoccer"] },
   { src: img4, alt: "Kolekcija maskota", cat: ["Maskote"] },
   { src: img5, alt: "SubSoccer stol", cat: ["SubSoccer"] },
   { src: img6, alt: "SubSoccer u akciji", cat: ["SubSoccer"] },
