@@ -9,9 +9,10 @@ import img3 from "@/assets/stitch-mascot-4.jpg";
 import img4 from "@/assets/custom-mascots.jpg";
 import img5 from "@/assets/subsoccer-table.jpg";
 import img6 from "@/assets/subsoccer-table-2.jpg";
-import img7 from "@/assets/event-photo-1.jpg";
-import img8 from "@/assets/event-photo-2.jpg";
-import img9 from "@/assets/event-photo-3.jpg";
+import img7 from "@/assets/stitch-mascot-3.jpg";
+import img8 from "@/assets/event-photo-1.jpg";
+import img9 from "@/assets/event-photo-2.jpg";
+import img10 from "@/assets/event-photo-3.jpg";
 
 type Category = "Sve" | "Maskote" | "SubSoccer" | "Rođendani" | "Eventi";
 
@@ -22,9 +23,10 @@ const photos: { src: string; alt: string; cat: Category[] }[] = [
   { src: img4, alt: "Kolekcija maskota", cat: ["Maskote"] },
   { src: img5, alt: "SubSoccer stol", cat: ["SubSoccer"] },
   { src: img6, alt: "SubSoccer u akciji", cat: ["SubSoccer"] },
-  { src: img7, alt: "Event zabava", cat: ["Rođendani", "Eventi"] },
-  { src: img8, alt: "Dječji rođendan", cat: ["Rođendani"] },
-  { src: img9, alt: "Proslava", cat: ["Eventi"] },
+  { src: img7, alt: "SubSoccer na travi", cat: ["SubSoccer"] },
+  { src: img8, alt: "Event zabava", cat: ["Rođendani", "Eventi"] },
+  { src: img9, alt: "Dječji rođendan", cat: ["Rođendani"] },
+  { src: img10, alt: "Proslava", cat: ["Eventi"] },
 ];
 
 const categories: Category[] = ["Sve", "Maskote", "SubSoccer", "Rođendani", "Eventi"];
