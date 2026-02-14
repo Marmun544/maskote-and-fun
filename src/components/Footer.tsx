@@ -7,7 +7,7 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
         {/* Brand */}
         <div>
-          <h3 className="font-display text-2xl font-bold mb-3">🎭 Maskote & More</h3>
+          <h3 className="font-display text-2xl font-bold mb-3">🎭 Maskote, Subsoccer ⚽ & More</h3>
           <p className="text-primary-foreground/70 text-sm">
             Zabava koja dolazi na vaš događaj — maskote, SubSoccer i više!
           </p>
@@ -45,7 +45,7 @@ const Footer = () => (
       </div>
 
       <div className="border-t border-primary-foreground/20 pt-6 text-center text-xs text-primary-foreground/50">
-        © {new Date().getFullYear()} Maskote and More. Sva prava pridržana.
+        © {new Date().getFullYear()} Maskote, Subsoccer & More. Sva prava pridržana.
       </div>
     </div>
   </footer>
