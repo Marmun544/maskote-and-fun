@@ -13,24 +13,28 @@ const services = [
     desc: "Stitch maskota koja oduševljava najmlađe i donosi osmijehe na svaku proslavu.",
     img: stitchImg,
     color: "from-primary/80 to-sky/60",
+    overlay: null,
   },
   {
     title: "Najam SubSoccer stola",
     desc: "Jedinstveni nogometni stol koji zabavlja sve generacije i unosi energiju u svaku zabavu.",
     img: subsoccerImg,
     color: "from-mint/80 to-primary/60",
+    overlay: null,
   },
   {
     title: "Kupi svoj SubSoccer ⚽",
     desc: "Želiš SubSoccer stol kod kuće ili u uredu? Sada ga možeš kupiti!",
     img: buySubsoccerImg,
     color: "from-primary/80 to-mint/60",
+    overlay: "Kupi svoj! ⚽",
   },
   {
     title: "Izrada maskote po narudžbi",
     desc: "Želite svoju jedinstvenu maskotu? Dizajniramo i izrađujemo po vašim željama.",
     img: customImg,
     color: "from-secondary/80 to-coral/60",
+    overlay: null,
   },
 ];
 
@@ -59,6 +63,13 @@ const ServicesPreview = () => (
             <div className="relative h-56 overflow-hidden">
               <img src={s.img} alt={s.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
               <div className={`absolute inset-0 bg-gradient-to-t ${s.color} opacity-40`} />
+              {s.overlay && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-white text-2xl font-extrabold drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] bg-primary/60 px-4 py-2 rounded-xl backdrop-blur-sm">
+                    {s.overlay}
+                  </span>
+                </div>
+              )}
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold mb-2">{s.title}</h3>
