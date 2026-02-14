@@ -7,6 +7,7 @@ import stitchImg2 from "@/assets/stitch-mascot-2.jpg";
 import subsoccerImg from "@/assets/subsoccer-table-2.jpg";
 import subsoccerImg2 from "@/assets/stitch-mascot-4.jpg";
 import customImg from "@/assets/custom-mascots.jpg";
+import buySubsoccerImg from "@/assets/subsoccer-buy.png";
 
 const Ponuda = () => (
   <main className="pt-24">
@@ -76,8 +77,35 @@ const Ponuda = () => (
       </div>
     </section>
 
-    {/* Custom Mascot */}
+    {/* Buy SubSoccer */}
     <section className="py-20 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Kupi svoj <span className="text-primary">SubSoccer ⚽</span></h2>
+            <p className="text-muted-foreground mb-6">Želiš SubSoccer stol kod kuće, u uredu ili u svom ugostiteljskom objektu? Sada ga možeš kupiti i uživati u zabavi kad god poželiš!</p>
+            <ul className="space-y-3 mb-8">
+              {["Savršen za kuću, ured ili kafić", "Kvalitetna izrada i dugotrajna zabava", "Dostava i montaža po dogovoru", "Kontaktiraj nas za cijenu i detalje"].map((item) => (
+                <li key={item} className="flex items-center gap-2 text-foreground">
+                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" /> {item}
+                </li>
+              ))}
+            </ul>
+            <Button asChild size="lg" className="rounded-full bg-secondary hover:bg-secondary/90 font-bold">
+              <a href="https://wa.me/385919419053?text=Pozdrav%2C%20zanima%20me%20kupnja%20SubSoccer%20stola!" target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="w-5 h-5 mr-2" /> Pošalji upit za kupnju
+              </a>
+            </Button>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            <img src={buySubsoccerImg} alt="Kupi SubSoccer stol" className="rounded-2xl w-full h-80 object-cover shadow-lg" />
+          </motion.div>
+        </div>
+      </div>
+    </section>
+
+    {/* Custom Mascot */}
+    <section className="py-20 bg-muted">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>

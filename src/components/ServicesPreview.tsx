@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import stitchImg from "@/assets/stitch-mascot-2.jpg";
 import subsoccerImg from "@/assets/subsoccer-table-2.jpg";
 import customImg from "@/assets/custom-mascots.jpg";
+import buySubsoccerImg from "@/assets/subsoccer-buy.png";
 
 const services = [
   {
@@ -18,6 +19,12 @@ const services = [
     desc: "Jedinstveni nogometni stol koji zabavlja sve generacije i unosi energiju u svaku zabavu.",
     img: subsoccerImg,
     color: "from-mint/80 to-primary/60",
+  },
+  {
+    title: "Kupi svoj SubSoccer ⚽",
+    desc: "Želiš SubSoccer stol kod kuće ili u uredu? Sada ga možeš kupiti!",
+    img: buySubsoccerImg,
+    color: "from-primary/80 to-mint/60",
   },
   {
     title: "Izrada maskote po narudžbi",
