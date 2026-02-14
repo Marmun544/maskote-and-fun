@@ -28,7 +28,6 @@ const services = [
     img: buySubsoccerImg,
     color: "from-primary/80 to-mint/60",
     overlay: "Kupi svoj! ⚽",
-    imgClass: "object-bottom",
   },
   {
     title: "Izrada maskote po narudžbi",
@@ -62,7 +61,7 @@ const ServicesPreview = () => (
             className="group rounded-2xl overflow-hidden bg-card shadow-md hover:shadow-xl transition-all hover:-translate-y-2"
           >
             <div className="relative h-56 overflow-hidden">
-              <img src={s.img} alt={s.title} className={`w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ${"imgClass" in s ? s.imgClass : ""}`} />
+              <img src={s.img} alt={s.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
               <div className={`absolute inset-0 bg-gradient-to-t ${s.color} opacity-40`} />
               {s.overlay && (
                 <div className="absolute inset-0 flex items-center justify-center">
