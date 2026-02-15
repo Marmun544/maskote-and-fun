@@ -65,7 +65,7 @@ const ServicesPreview = () => (
               <img src={s.img} alt={s.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
               <div className={`absolute inset-0 bg-gradient-to-t ${s.color} opacity-40`} />
               {s.overlay && (
-                <div className={`absolute inset-0 flex items-center justify-center ${"overlayPosition" in s && s.overlayPosition === "bottom" ? "pt-24" : ""}`}>
+                <div className={`absolute inset-0 flex items-center justify-center ${"overlayPosition" in s && s.overlayPosition === "bottom" ? "pt-36" : ""}`}>
                   <span className="text-white text-2xl font-extrabold drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] bg-primary/60 px-4 py-2 rounded-xl backdrop-blur-sm">
                     {s.overlay}
                   </span>
