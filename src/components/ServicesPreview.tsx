@@ -21,13 +21,14 @@ const services = [
     img: subsoccerImg,
     color: "from-mint/80 to-primary/60",
     overlay: "Rent me! ⚽",
+    overlayPosition: "bottom",
   },
   {
-    title: "Kupi svoj SubSoccer ⚽",
-    desc: "Želiš SubSoccer stol kod kuće ili u uredu? Sada ga možeš kupiti!",
+    title: "Naruči svoj SubSoccer ⚽",
+    desc: "Želiš SubSoccer stol kod kuće ili u uredu? Sada ga možeš naručiti!",
     img: buySubsoccerImg,
     color: "from-primary/80 to-mint/60",
-    overlay: "Kupi svoj! ⚽",
+    overlay: null,
   },
   {
     title: "Izrada maskote po narudžbi",
@@ -64,7 +65,7 @@ const ServicesPreview = () => (
               <img src={s.img} alt={s.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
               <div className={`absolute inset-0 bg-gradient-to-t ${s.color} opacity-40`} />
               {s.overlay && (
-                <div className="absolute inset-0 flex items-center justify-center">
+                <div className={`absolute inset-0 flex items-center justify-center ${"overlayPosition" in s && s.overlayPosition === "bottom" ? "pt-24" : ""}`}>
                   <span className="text-white text-2xl font-extrabold drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] bg-primary/60 px-4 py-2 rounded-xl backdrop-blur-sm">
                     {s.overlay}
                   </span>
