@@ -81,7 +81,7 @@ const Ponuda = () => {
             <p className="text-muted-foreground mb-4">Jedinstveni nogometni stol koji zabavlja sve generacije i unosi energiju u svaku zabavu. Radi se o čvrstom stolu cijele izvedbe od metala — najkvalitetnija moguća konstrukcija, bez mreža i plastičnih stranica.</p>
             <p className="font-semibold text-foreground mb-2">U cijenu je uključeno:</p>
             <ul className="space-y-3 mb-4">
-              {["Dostava i montaža na lokaciji"].map((item) => (
+              {["Dostava i montaža na lokaciji", "Umjetna trava uključena"].map((item) => (
                 <li key={item} className="flex items-center gap-2 text-foreground">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" /> {item}
                 </li>
@@ -138,9 +138,9 @@ const Ponuda = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Izrada maskote <span className="text-secondary">po narudžbi</span></h2>
-            <p className="text-muted-foreground mb-6">Želite svoju jedinstvenu maskotu? Mi je dizajniramo i izrađujemo po vašim željama.</p>
+            <p className="text-muted-foreground mb-6">Želite maskotu svog omiljenog super junaka, lika iz crtića ili nekog drugog lika? Mi je izrađujemo! Također radimo i potpuno prilagođene maskote prema vašim željama.</p>
             <ul className="space-y-3 mb-8">
-              {["Prilagođeni dizajn i boje", "Idealno za firme, promocije i posebne događaje"].map((item) => (
+              {["Maskote poznatih likova i super junaka", "Prilagođeni dizajn i boje", "Idealno za firme, promocije i posebne događaje"].map((item) => (
                 <li key={item} className="flex items-center gap-2 text-foreground">
                   <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" /> {item}
                 </li>
