@@ -27,14 +27,18 @@ const Ponuda = () => (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Najam <span className="text-primary">Stitch maskote</span></h2>
+            <p className="text-2xl font-extrabold text-primary mb-2">80 €</p>
             <p className="text-muted-foreground mb-6">Stitch maskota koja oduševljava najmlađe i donosi osmijehe na svaku proslavu.</p>
-            <ul className="space-y-3 mb-8">
-              {["Dolazak na lokaciju po dogovoru", "Interakcija s djecom i fotografiranje", "Idealno za rođendane i evente"].map((item) => (
+            <p className="font-semibold text-foreground mb-2">U cijenu je uključeno:</p>
+            <ul className="space-y-3 mb-4">
+              {["Dolazak na lokaciju", "Druženje s djecom", "Ples i animacija", "Slikanje / fotografiranje", "Dijeljenje slatkiša"].map((item) => (
                 <li key={item} className="flex items-center gap-2 text-foreground">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" /> {item}
                 </li>
               ))}
             </ul>
+            <p className="text-muted-foreground mb-2">Moguć je i dogovor oko samog programa prema vašim željama.</p>
+            <p className="text-xs text-muted-foreground mb-6">* Cijena je varijabilna ovisno o lokaciji, broju djece i ostalim detaljima.</p>
             <Button asChild size="lg" className="rounded-full bg-secondary hover:bg-secondary/90 font-bold">
               <a href="https://wa.me/385919419053?text=Pozdrav%2C%20želim%20rezervirati%20Stitch%20maskotu!" target="_blank" rel="noopener noreferrer">
                 <CalendarCheck className="w-5 h-5 mr-2" /> Rezerviraj maskotu
@@ -59,9 +63,19 @@ const Ponuda = () => (
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-1 lg:order-2">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Najam <span className="text-primary">SubSoccer stola</span></h2>
-            <p className="text-muted-foreground mb-6">Jedinstveni nogometni stol ispod stola koji zabavlja sve generacije i unosi energiju u svaku zabavu.</p>
-            <ul className="space-y-3 mb-8">
-              {["Zabava za djecu i odrasle", "Idealno za druženja, rođendane i evente", "Brza i jednostavna instalacija"].map((item) => (
+            <p className="text-2xl font-extrabold text-primary mb-2">70 € / dan / event</p>
+            <p className="text-muted-foreground mb-4">Jedinstveni nogometni stol koji zabavlja sve generacije i unosi energiju u svaku zabavu. Radi se o čvrstom stolu cijele izvedbe od metala — najkvalitetnija moguća konstrukcija, bez mreža i plastičnih stranica.</p>
+            <p className="font-semibold text-foreground mb-2">U cijenu je uključeno:</p>
+            <ul className="space-y-3 mb-4">
+              {["Dostava i montaža na lokaciji"].map((item) => (
+                <li key={item} className="flex items-center gap-2 text-foreground">
+                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" /> {item}
+                </li>
+              ))}
+            </ul>
+            <p className="font-semibold text-foreground mb-2">Dodatne mogućnosti:</p>
+            <ul className="space-y-3 mb-4">
+              {["Organizacija turnira uz nagrade", "Vođenje turnira", "Mogućnost brendiranja stola za evente i događaje", "Idealno za upotpuniti program, unijeti adrenalin i natjecanje"].map((item) => (
                 <li key={item} className="flex items-center gap-2 text-foreground">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" /> {item}
                 </li>

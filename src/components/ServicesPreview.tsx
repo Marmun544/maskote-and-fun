@@ -13,15 +13,14 @@ const services = [
     desc: "Stitch maskota koja oduševljava najmlađe i donosi osmijehe na svaku proslavu.",
     img: stitchImg,
     color: "from-primary/80 to-sky/60",
-    overlay: "Rent me! 🎭",
+    overlay: null,
   },
   {
     title: "Najam SubSoccer stola",
     desc: "Jedinstveni nogometni stol koji zabavlja sve generacije i unosi energiju u svaku zabavu.",
     img: subsoccerImg,
     color: "from-mint/80 to-primary/60",
-    overlay: "Rent me! ⚽",
-    overlayPosition: "bottom",
+    overlay: null,
   },
   {
     title: "Naruči svoj SubSoccer ⚽",
