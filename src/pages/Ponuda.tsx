@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { CalendarCheck, MessageCircle, CheckCircle } from "lucide-react";
@@ -9,7 +11,19 @@ import subsoccerImg2 from "@/assets/stitch-mascot-4.jpg";
 import customImg from "@/assets/custom-mascots.jpg";
 import buySubsoccerImg from "@/assets/subsoccer-buy.png";
 
-const Ponuda = () => (
+const Ponuda = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      setTimeout(() => {
+        const el = document.querySelector(hash);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 100);
+    }
+  }, [hash]);
+
+  return (
   <main className="pt-24">
     {/* Intro */}
     <section className="py-16 bg-muted">
@@ -147,6 +161,7 @@ const Ponuda = () => (
 
     <PricingCTA />
   </main>
-);
+  );
+};
 
 export default Ponuda;
