@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import stitchImg from "@/assets/stitch-mascot-2.jpg";
@@ -14,6 +13,7 @@ const services = [
     img: stitchImg,
     color: "from-primary/80 to-sky/60",
     overlay: null,
+    link: "/ponuda#stitch-maskota",
   },
   {
     title: "Najam SubSoccer stola",
@@ -21,6 +21,7 @@ const services = [
     img: subsoccerImg,
     color: "from-mint/80 to-primary/60",
     overlay: null,
+    link: "/ponuda#subsoccer-najam",
   },
   {
     title: "Naruči svoj SubSoccer ⚽",
@@ -28,6 +29,7 @@ const services = [
     img: buySubsoccerImg,
     color: "from-primary/80 to-mint/60",
     overlay: null,
+    link: "/ponuda#subsoccer-kupnja",
   },
   {
     title: "Izrada maskote po narudžbi",
@@ -35,6 +37,7 @@ const services = [
     img: customImg,
     color: "from-secondary/80 to-coral/60",
     overlay: null,
+    link: "/ponuda#custom-maskota",
   },
 ];
 
@@ -75,9 +78,9 @@ const ServicesPreview = () => (
               <h3 className="text-xl font-bold mb-2">{s.title}</h3>
               <p className="text-muted-foreground text-sm mb-4">{s.desc}</p>
               <Button asChild variant="link" className="text-primary font-bold p-0">
-                <Link to="/ponuda">
+                <a href={s.link}>
                   Saznaj više <ArrowRight className="w-4 h-4 ml-1" />
-                </Link>
+                </a>
               </Button>
             </div>
           </motion.div>

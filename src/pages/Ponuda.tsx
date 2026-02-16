@@ -22,7 +22,7 @@ const Ponuda = () => (
     </section>
 
     {/* Stitch Mascot */}
-    <section className="py-20 bg-background">
+    <section id="stitch-maskota" className="py-20 bg-background scroll-mt-24">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
@@ -54,7 +54,7 @@ const Ponuda = () => (
     </section>
 
     {/* SubSoccer */}
-    <section className="py-20 bg-muted">
+    <section id="subsoccer-najam" className="py-20 bg-muted scroll-mt-24">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-2 lg:order-1 grid grid-cols-1 gap-3">
@@ -92,7 +92,7 @@ const Ponuda = () => (
     </section>
 
     {/* Buy SubSoccer */}
-    <section className="py-20 bg-background">
+    <section id="subsoccer-kupnja" className="py-20 bg-background scroll-mt-24">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
@@ -119,7 +119,7 @@ const Ponuda = () => (
     </section>
 
     {/* Custom Mascot */}
-    <section className="py-20 bg-muted">
+    <section id="custom-maskota" className="py-20 bg-muted scroll-mt-24">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
