@@ -25,7 +25,7 @@ const photos: { src: string; alt: string; cat: Category[] }[] = [
   { src: img6, alt: "SubSoccer u akciji", cat: ["SubSoccer"] },
   { src: img7, alt: "SubSoccer na travi", cat: ["SubSoccer"] },
   { src: img8, alt: "Event zabava", cat: ["Rođendani", "Eventi"] },
-  { src: img9, alt: "Dječji rođendan", cat: ["Rođendani"] },
+  { src: img9, alt: "SubSoccer na događaju", cat: ["SubSoccer"] },
   { src: img10, alt: "Proslava", cat: ["Eventi"] },
 ];
 
