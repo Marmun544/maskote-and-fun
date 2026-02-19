@@ -23,7 +23,7 @@ const photos: { src: string; alt: string; cat: Category[] }[] = [
   { src: img4, alt: "Kolekcija maskota", cat: ["Maskote"] },
   { src: img5, alt: "SubSoccer stol", cat: ["SubSoccer"] },
   { src: img6, alt: "SubSoccer u akciji", cat: ["SubSoccer"] },
-  { src: img7, alt: "SubSoccer na travi", cat: ["SubSoccer"] },
+  { src: img7, alt: "Stitch maskota na travi", cat: ["Maskote"] },
   { src: img8, alt: "Event zabava", cat: ["Rođendani", "Eventi"] },
   { src: img9, alt: "Dječji rođendan", cat: ["Rođendani"] },
   { src: img10, alt: "Proslava", cat: ["Eventi"] },
