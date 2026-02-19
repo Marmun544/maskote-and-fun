@@ -13,6 +13,7 @@ import img7 from "@/assets/stitch-mascot-3.jpg";
 import img8 from "@/assets/event-photo-1.jpg";
 import img9 from "@/assets/event-photo-2.jpg";
 import img10 from "@/assets/event-photo-3.jpg";
+import img11 from "@/assets/stitch-birthday-1.jpg";
 
 type Category = "Sve" | "Maskote" | "SubSoccer" | "Rođendani" | "Eventi";
 
@@ -27,6 +28,7 @@ const photos: { src: string; alt: string; cat: Category[] }[] = [
   { src: img8, alt: "Event zabava", cat: ["Rođendani", "Eventi"] },
   { src: img9, alt: "SubSoccer na događaju", cat: ["SubSoccer"] },
   { src: img10, alt: "Proslava", cat: ["Eventi"] },
+  { src: img11, alt: "Stitch maskota s djecom na rođendanu", cat: ["Maskote", "Rođendani"] },
 ];
 
 const categories: Category[] = ["Sve", "Maskote", "SubSoccer", "Rođendani", "Eventi"];
