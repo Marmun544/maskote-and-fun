@@ -1,6 +1,6 @@
 /maskote-and-fun
  ├─ public/
- │   └─ moj-logo.jpg
+ │   └─ moj-logo.png
  ├─ src/
  ├─ index.html
  ├─ package.json
