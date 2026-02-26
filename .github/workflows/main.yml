@@ -1,7 +1,3 @@
-Moja greška, sistem nekada sakrije blokove koda. Evo ga sada kao običan tekst, bez ikakvih okvira.
-
-Kopiraj sve od prve riječi "name" do samog kraja:
-
 name: Deploy
 on:
 push:
