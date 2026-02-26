@@ -4,7 +4,7 @@ import path from "path";
 
 export default defineConfig({
   // Ključno za GitHub Pages da bi ikonica radila
-  "/maskote-and-fun/", 
+  base: "/", 
   plugins: [react()],
   resolve: {
     alias: {
