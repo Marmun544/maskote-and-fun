@@ -2,9 +2,9 @@ name: Deploy
 on:
   push:
     branches: [main]
-..workflow_dispatch:
+  workflow_dispatch:
 permissions:
-  actions: contents: read
+  contents: read
   pages: write
   id-token: write
 jobs:
