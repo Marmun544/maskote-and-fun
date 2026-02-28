@@ -1,0 +1,7 @@
+/maskote-and-fun
+ ├─ public/
+ │   └─ moj_logo.png
+ ├─ src/
+ ├─ index.html
+ ├─ vite.config.ts
+ └─ package.json
