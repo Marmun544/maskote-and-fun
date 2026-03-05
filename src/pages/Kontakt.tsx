@@ -13,9 +13,10 @@ const Kontakt = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const text = `Pozdrav! Ime: ${form.name}, Kontakt: ${form.contact}, Tema: ${form.topic}, Poruka: ${form.message}`;
-    window.open(`https://wa.me/385919419053?text=${encodeURIComponent(text)}`, "_blank");
-    toast({ title: "Upit poslan!", description: "Preusmjeravamo vas na WhatsApp." });
+    const subject = `Nova poruka od ${form.name} - Tema: ${form.topic}`;
+    const body = `Ime i prezime: ${form.name}\nKontakt: ${form.contact}\nTema: ${form.topic}\n\nPoruka:\n${form.message}`;
+    window.location.href = `mailto:kovadario628@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    toast({ title: "Otvaranje email klijenta...", description: "Poruka će biti poslana vašim email klijentom." });
   };
 
   return (
