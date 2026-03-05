@@ -60,12 +60,9 @@ const Ponuda = () => {
               </a>
             </Button>
           </motion.div>
-          <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="space-y-3">
-            <video src="/videos/maskota-video.mp4" muted autoPlay loop playsInline className="rounded-2xl w-full h-56 object-cover shadow-lg" />
-            <div className="grid grid-cols-2 gap-3">
-              <img src={stitchImg1} alt="Stitch maskota" className="rounded-2xl w-full h-48 object-cover" />
-              <img src={stitchImg2} alt="Stitch maskota" className="rounded-2xl w-full h-48 object-cover" />
-            </div>
+          <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="grid grid-cols-2 gap-3">
+            <img src={stitchImg1} alt="Stitch maskota" className="rounded-2xl w-full h-48 object-cover" />
+            <img src={stitchImg2} alt="Stitch maskota" className="rounded-2xl w-full h-48 object-cover" />
           </motion.div>
         </div>
       </div>
