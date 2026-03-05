@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import stitchImg from "@/assets/stitch-mascot-2.jpg";
 import subsoccerImg from "@/assets/subsoccer-table-2.jpg";
-import customImg from "@/assets/custom-mascots.jpg";
+import customImg from "@/assets/mascots-collection.jpg";
 import buySubsoccerImg from "@/assets/subsoccer-buy.png";
 
 const services = [
