@@ -14,6 +14,10 @@ import img8 from "@/assets/event-photo-1.jpg";
 import img9 from "@/assets/event-photo-2.jpg";
 import img10 from "@/assets/event-photo-3.jpg";
 import img11 from "@/assets/stitch-birthday-1.jpg";
+import img12 from "@/assets/birthday-party-1.jpg";
+import img13 from "@/assets/stitch-kids-1.jpg";
+import img14 from "@/assets/birthday-party-2.jpg";
+import img15 from "@/assets/birthday-party-3.jpg";
 
 type Category = "Sve" | "Maskote" | "SubSoccer" | "Rođendani" | "Eventi";
 
@@ -29,6 +33,10 @@ const photos: { src: string; alt: string; cat: Category[] }[] = [
   { src: img9, alt: "SubSoccer na događaju", cat: ["SubSoccer"] },
   { src: img10, alt: "Proslava", cat: ["Eventi"] },
   { src: img11, alt: "Stitch maskota s djecom na rođendanu", cat: ["Maskote", "Rođendani"] },
+  { src: img12, alt: "Stitch maskota na rođendanu s djecom", cat: ["Rođendani"] },
+  { src: img13, alt: "Stitch maskota s djecom", cat: ["Maskote"] },
+  { src: img14, alt: "Stitch rođendanska zabava", cat: ["Rođendani", "Eventi"] },
+  { src: img15, alt: "Stitch zagrljaj s djecom na rođendanu", cat: ["Rođendani", "Eventi"] },
 ];
 
 const categories: Category[] = ["Sve", "Maskote", "SubSoccer", "Rođendani", "Eventi"];
