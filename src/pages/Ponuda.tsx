@@ -9,6 +9,7 @@ import stitchImg2 from "@/assets/stitch-mascot-2.jpg";
 import subsoccerImg from "@/assets/subsoccer-table-2.jpg";
 import subsoccerImg2 from "@/assets/stitch-mascot-4.jpg";
 import customImg from "@/assets/custom-mascots.jpg";
+import customImgMain from "@/assets/mascots-collection.jpg";
 import buySubsoccerImg from "@/assets/subsoccer-buy.png";
 
 const Ponuda = () => {
@@ -152,8 +153,9 @@ const Ponuda = () => {
               </a>
             </Button>
           </motion.div>
-          <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <img src={customImg} alt="Izrada maskote" className="rounded-2xl w-full h-80 object-cover shadow-lg" />
+          <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="grid grid-cols-1 gap-3">
+            <img src={customImgMain} alt="Kolekcija maskota" className="rounded-2xl w-full h-64 object-cover shadow-lg" />
+            <img src={customImg} alt="Izrada maskote" className="rounded-2xl w-full h-48 object-cover shadow-lg" />
           </motion.div>
         </div>
       </div>
