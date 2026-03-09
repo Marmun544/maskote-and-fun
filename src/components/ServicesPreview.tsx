@@ -25,7 +25,7 @@ const services = [
     link: "/ponuda#subsoccer-najam",
   },
   {
-    title: "Penalty Challenge ⚽",
+    title: "Penalty Challenge – nogometni napuhanac ⚽",
     desc: "Napuhanac za pucanje penala – savršena zabava za djecu i odrasle na svakom događaju!",
     img: penaltyImg,
     color: "from-secondary/80 to-primary/60",
