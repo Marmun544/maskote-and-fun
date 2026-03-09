@@ -31,6 +31,7 @@ const services = [
     color: "from-secondary/80 to-primary/60",
     overlay: null,
     link: "/ponuda#penalty-challenge",
+  },
   {
     title: "Naruči svoj SubSoccer ⚽",
     desc: "Želiš SubSoccer stol kod kuće ili u uredu? Sada ga možeš naručiti!",
