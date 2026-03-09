@@ -5,6 +5,7 @@ import stitchImg from "@/assets/stitch-mascot-2.jpg";
 import subsoccerImg from "@/assets/subsoccer-table-2.jpg";
 import customImg from "@/assets/mascots-collection.jpg";
 import buySubsoccerImg from "@/assets/subsoccer-buy.png";
+import penaltyImg from "@/assets/penalty-challenge.png";
 
 const services = [
   {
@@ -22,6 +23,14 @@ const services = [
     color: "from-mint/80 to-primary/60",
     overlay: null,
     link: "/ponuda#subsoccer-najam",
+  },
+  {
+    title: "Penalty Challenge ⚽",
+    desc: "Napuhanac za pucanje penala – savršena zabava za djecu i odrasle na svakom događaju!",
+    img: penaltyImg,
+    color: "from-secondary/80 to-primary/60",
+    overlay: null,
+    link: "/ponuda#penalty-challenge",
   },
   {
     title: "Naruči svoj SubSoccer ⚽",
