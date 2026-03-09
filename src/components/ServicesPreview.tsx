@@ -41,7 +41,7 @@ const services = [
     link: "/ponuda#subsoccer-kupnja",
   },
   {
-    title: "Prodaja maskota po narudžbi",
+    title: "Naruči svoju maskotu",
     desc: "Želite svoju jedinstvenu maskotu? Dizajniramo i izrađujemo po vašim željama.",
     img: customImg,
     color: "from-secondary/80 to-coral/60",
