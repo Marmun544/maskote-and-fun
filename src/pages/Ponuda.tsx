@@ -11,6 +11,7 @@ import subsoccerImg2 from "@/assets/stitch-mascot-4.jpg";
 import customImg from "@/assets/custom-mascots.jpg";
 import customImgMain from "@/assets/mascots-collection.jpg";
 import buySubsoccerImg from "@/assets/subsoccer-buy.png";
+import penaltyImg from "@/assets/penalty-challenge.png";
 
 const Ponuda = () => {
   const { hash } = useLocation();
@@ -106,8 +107,40 @@ const Ponuda = () => {
       </div>
     </section>
 
+    {/* Penalty Challenge */}
+    <section id="penalty-challenge" className="py-20 bg-background scroll-mt-24">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Penalty Challenge – <span className="text-primary">nogometni napuhanac ⚽</span></h2>
+            <p className="text-2xl font-extrabold text-primary mb-2">80 €</p>
+            <p className="text-muted-foreground mb-4">Dodajte pravu nogometnu atmosferu svom događaju uz naš Penalty Challenge napuhanac! Savršena atrakcija za djecu i odrasle koji žele testirati svoju preciznost i zabaviti se uz natjecanje u pucanju penala.</p>
+            <p className="text-muted-foreground mb-4">Igra je jednostavna – ciljajte rupe na golu i skupite što više bodova! Idealno za rođendane, proslave, školske događaje, sportske dane, team buildinge i razne evente na otvorenom.</p>
+            <p className="font-semibold text-foreground mb-2">Što je uključeno:</p>
+            <ul className="space-y-3 mb-4">
+              {["Dostava i postavljanje na lokaciji", "Lopte uključene u cijenu", "Mogućnost organizacije natjecanja s nagradama", "Idealno za privatne zabave i veće evente"].map((item) => (
+                <li key={item} className="flex items-center gap-2 text-foreground">
+                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" /> {item}
+                </li>
+              ))}
+            </ul>
+            <p className="text-muted-foreground mb-2">Po želji možemo organizirati natjecanje s nagradama – nogometni dresovi, lopte i druge sportske nagrade!</p>
+            <p className="text-xs text-muted-foreground mb-6">📅 Primamo rezervacije za 5. i 6. mjesec te sve termine nakon toga.</p>
+            <Button asChild size="lg" className="rounded-full bg-secondary hover:bg-secondary/90 font-bold">
+              <a href="https://wa.me/385919419053?text=Pozdrav%2C%20želim%20rezervirati%20Penalty%20Challenge%20napuhanac!" target="_blank" rel="noopener noreferrer">
+                <CalendarCheck className="w-5 h-5 mr-2" /> Rezerviraj Penalty Challenge
+              </a>
+            </Button>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            <img src={penaltyImg} alt="Penalty Challenge napuhanac" className="rounded-2xl w-full h-80 object-cover shadow-lg" />
+          </motion.div>
+        </div>
+      </div>
+    </section>
+
     {/* Buy SubSoccer */}
-    <section id="subsoccer-kupnja" className="py-20 bg-background scroll-mt-24">
+    <section id="subsoccer-kupnja" className="py-20 bg-muted scroll-mt-24">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
