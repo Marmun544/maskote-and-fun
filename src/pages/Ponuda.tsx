@@ -11,6 +11,7 @@ import subsoccerImg2 from "@/assets/stitch-mascot-4.jpg";
 import customImg from "@/assets/custom-mascots.jpg";
 import customImgMain from "@/assets/mascots-collection.jpg";
 import buySubsoccerImg from "@/assets/subsoccer-buy.png";
+import penaltyImg from "@/assets/penalty-challenge.png";
 
 const Ponuda = () => {
   const { hash } = useLocation();
