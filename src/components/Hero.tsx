@@ -19,7 +19,7 @@ const Hero = () => {
       {/* Background */}
       <div className="absolute inset-0">
         <img src={heroImg} alt="Maskote, Subsoccer & More zabava" className="w-full h-full object-contain md:object-cover object-center" />
-        {/* clean image, no color overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-primary/15 to-primary/40" />
       </div>
 
       {/* Content */}
