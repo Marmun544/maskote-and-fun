@@ -51,6 +51,10 @@ const Hero = () => {
         </motion.div>
       </div>
 
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 w-[220px] sm:w-[280px] md:w-[320px] pointer-events-none">
+        <img src={subsoccerOriginalImg} alt="SubSoccer stol s grbovima Barcelone i Reala" className="w-full h-auto object-contain" />
+      </div>
+
       {/* Wave bottom */}
       <div className="absolute bottom-0 left-0 right-0">
         <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
