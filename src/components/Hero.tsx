@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { CalendarCheck } from "lucide-react";
-import heroImg from "@/assets/hero-main.jpg";
+import heroImg from "@/assets/hero-main-new.jpg";
 import WhatsAppChoiceDialog from "@/components/WhatsAppChoiceDialog";
 
 const Hero = () => {
