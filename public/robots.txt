@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://maskote-and-fun.lovable.app/sitemap.xml
+Sitemap: https://maskote-subsoccer-and-more.space/sitemap.xml
