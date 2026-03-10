@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { CalendarCheck } from "lucide-react";
 import heroImg from "@/assets/hero-main-new.jpg";
-import subsoccerOriginalImg from "@/assets/subsoccer-clean.jpg";
 import WhatsAppChoiceDialog from "@/components/WhatsAppChoiceDialog";
 const Hero = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
