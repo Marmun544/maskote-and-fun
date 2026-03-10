@@ -15,11 +15,11 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <img src={heroImg} alt="Maskote, Subsoccer & More zabava" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/50 to-primary/80" />
+        <img src={heroImg} alt="Maskote, Subsoccer & More zabava" className="w-full h-full object-contain md:object-cover object-center" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-transparent to-primary/70 md:from-primary/70 md:via-primary/50 md:to-primary/80" />
       </div>
 
       {/* Content */}
