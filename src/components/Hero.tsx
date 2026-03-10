@@ -15,10 +15,10 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <img src={heroImg} alt="Maskote, Subsoccer & More zabava" className="w-full h-full object-contain md:object-cover object-center" />
+        <img src={heroImg} alt="Maskote, Subsoccer & More zabava" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-primary/15 to-primary/40" />
       </div>
 
