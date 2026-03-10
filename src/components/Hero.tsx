@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { CalendarCheck } from "lucide-react";
 import heroImg from "@/assets/hero-main-new.jpg";
-import subsoccerOriginalImg from "@/assets/subsoccer-clean.jpg";
 import WhatsAppChoiceDialog from "@/components/WhatsAppChoiceDialog";
 const Hero = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -51,9 +50,6 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 w-[220px] sm:w-[280px] md:w-[320px] pointer-events-none">
-        <img src={subsoccerOriginalImg} alt="SubSoccer stol s grbovima Barcelone i Reala" className="w-full h-auto object-contain" />
-      </div>
 
       {/* Wave bottom */}
       <div className="absolute bottom-0 left-0 right-0">
