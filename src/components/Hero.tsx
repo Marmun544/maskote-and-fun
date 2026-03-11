@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { CalendarCheck } from "lucide-react";
 import heroImg from "@/assets/hero-main-new.jpg";
 import WhatsAppChoiceDialog from "@/components/WhatsAppChoiceDialog";
+
 const Hero = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [dialogVariant, setDialogVariant] = useState<"reserve" | "contact">("reserve");
@@ -49,7 +50,6 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
-
 
       {/* Wave bottom */}
       <div className="absolute bottom-0 left-0 right-0">
