@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import stitchImg from "@/assets/stitch-mascot-2.jpg";
+import elsaImg from "@/assets/elsa-mascot.jpg";
+import marioImg from "@/assets/mario-mascot.jpg";
 import subsoccerImg from "@/assets/stitch-mascot-4.jpg";
 import customImg from "@/assets/mascots-collection.jpg";
 import buySubsoccerImg from "@/assets/subsoccer-buy.png";
@@ -12,6 +14,7 @@ const services = [
     title: "Najam maskote (Stitch, Elsa, Super Mario)",
     desc: "Maskote koje oduševljavaju najmlađe — Stitch, Elsa i Super Mario dolaze na vašu proslavu!",
     img: stitchImg,
+    images: [stitchImg, elsaImg, marioImg],
     color: "from-primary/80 to-sky/60",
     overlay: null,
     link: "/ponuda#stitch-maskota",
@@ -73,15 +76,17 @@ const ServicesPreview = () => (
             className="group rounded-2xl overflow-hidden bg-card shadow-md hover:shadow-xl transition-all hover:-translate-y-2"
           >
             <div className="relative h-56 overflow-hidden">
-              <img src={s.img} alt={s.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-              {/* clean image, no overlay gradient */}
-              {s.overlay && (
-                <div className={`absolute inset-0 flex items-center justify-center ${"overlayPosition" in s && s.overlayPosition === "bottom" ? "pt-36" : ""}`}>
-                  <span className="text-white text-2xl font-extrabold drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] bg-primary/60 px-4 py-2 rounded-xl backdrop-blur-sm">
-                    {s.overlay}
-                  </span>
-                </div>
-              )}
+            {"images" in s && s.images ? (
+              <div className="grid grid-cols-3 gap-1 h-56">
+                {s.images.map((img, idx) => (
+                  <img key={idx} src={img} alt={`${s.title} ${idx + 1}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                ))}
+              </div>
+            ) : (
+              <div className="relative h-56 overflow-hidden">
+                <img src={s.img} alt={s.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+            )}
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold mb-2">{s.title}</h3>
