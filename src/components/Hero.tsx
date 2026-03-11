@@ -28,16 +28,24 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}>
+
+          {/* Service labels */}
+          <div className="flex flex-wrap justify-center gap-2 mb-6">
+            {["SUBSOCCER", "MASKOTE", "PENALTY CHALLENGE", "NAPUHANAC"].map((label) => (
+              <span key={label} className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-bold tracking-wider border border-white/30">
+                {label}
+              </span>
+            ))}
+          </div>
           
           <span className="inline-block bg-secondary/90 text-secondary-foreground px-4 py-1 rounded-full text-sm font-bold mb-6">
             🎭✨ Zabava za svaki poseban trenutak
           </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
             Učini poseban trenutak<br />
             <span className="text-sunshine">još posebnijim</span>
           </h1>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto mb-10 opacity-90">Zabava koja dolazi na vaš događaj — maskote, SubSoccer i još mnogo toga! Oduševite goste i stvorite nezaboravne uspomene.
-
+          <p className="text-base md:text-lg max-w-2xl mx-auto mb-8 opacity-90">Zabava koja dolazi na vaš događaj — maskote, SubSoccer i još mnogo toga! Oduševite goste i stvorite nezaboravne uspomene.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="rounded-full bg-secondary hover:bg-secondary/90 text-secondary-foreground text-lg px-8 font-bold shadow-xl" onClick={() => openDialog("reserve")}>
