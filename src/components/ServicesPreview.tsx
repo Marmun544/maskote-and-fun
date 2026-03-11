@@ -9,8 +9,8 @@ import penaltyImg from "@/assets/penalty-challenge.png";
 
 const services = [
   {
-    title: "Najam Stitch maskote",
-    desc: "Stitch maskota koja oduševljava najmlađe i donosi osmijehe na svaku proslavu.",
+    title: "Najam maskote (Stitch, Elsa, Super Mario)",
+    desc: "Maskote koje oduševljavaju najmlađe — Stitch, Elsa i Super Mario dolaze na vašu proslavu!",
     img: stitchImg,
     color: "from-primary/80 to-sky/60",
     overlay: null,

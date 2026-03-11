@@ -43,9 +43,9 @@ const Ponuda = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Najam <span className="text-primary">Stitch maskote</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Najam <span className="text-primary">maskote</span> <span className="text-muted-foreground text-xl">(Stitch, Elsa, Super Mario)</span></h2>
             <p className="text-2xl font-extrabold text-primary mb-2">80 €</p>
-            <p className="text-muted-foreground mb-6">Stitch maskota koja oduševljava najmlađe i donosi osmijehe na svaku proslavu.</p>
+            <p className="text-muted-foreground mb-6">Naša najpopularnija maskota Stitch oduševljava najmlađe i donosi osmijehe na svaku proslavu! Uz Stitcha, u ponudi imamo i Elsu iz Frozena te Super Maria — odaberite omiljenog lika za svoj poseban dan.</p>
             <p className="font-semibold text-foreground mb-2">U cijenu je uključeno:</p>
             <ul className="space-y-3 mb-4">
               {["Dolazak na lokaciju", "Druženje s djecom", "Ples i animacija", "Slikanje / fotografiranje", "Dijeljenje slatkiša"].map((item) => (
@@ -57,14 +57,15 @@ const Ponuda = () => {
             <p className="text-muted-foreground mb-2">Moguć je i dogovor oko samog programa prema vašim željama.</p>
             <p className="text-xs text-muted-foreground mb-6">* Cijena je varijabilna ovisno o lokaciji, broju djece i ostalim detaljima.</p>
             <Button asChild size="lg" className="rounded-full bg-secondary hover:bg-secondary/90 font-bold">
-              <a href="https://wa.me/385919419053?text=Pozdrav%2C%20želim%20rezervirati%20Stitch%20maskotu!" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/385919419053?text=Pozdrav%2C%20želim%20rezervirati%20maskotu!" target="_blank" rel="noopener noreferrer">
                 <CalendarCheck className="w-5 h-5 mr-2" /> Rezerviraj maskotu
               </a>
             </Button>
           </motion.div>
-          <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="grid grid-cols-2 gap-3">
-            <img src={stitchImg1} alt="Stitch maskota" className="rounded-2xl w-full h-48 object-cover" />
-            <img src={stitchImg2} alt="Stitch maskota" className="rounded-2xl w-full h-48 object-cover" />
+          <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="grid grid-cols-3 gap-3">
+            <img src={stitchImg} alt="Stitch maskota" className="rounded-2xl w-full h-56 object-cover" />
+            <img src={elsaImg} alt="Elsa maskota" className="rounded-2xl w-full h-56 object-cover" />
+            <img src={marioImg} alt="Super Mario maskota" className="rounded-2xl w-full h-56 object-cover" />
           </motion.div>
         </div>
       </div>
