@@ -57,7 +57,7 @@ const Ponuda = () => {
             <p className="text-muted-foreground mb-2">Moguć je i dogovor oko samog programa prema vašim željama.</p>
             <p className="text-xs text-muted-foreground mb-6">* Cijena je varijabilna ovisno o lokaciji, broju djece i ostalim detaljima.</p>
             <Button asChild size="lg" className="rounded-full bg-secondary hover:bg-secondary/90 font-bold">
-              <a href="https://wa.me/385919419053?text=Pozdrav%2C%20želim%20rezervirati%20maskotu!" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/385919419053?text=Pozdrav%2C%20zanima%20me%20najam%20maskote!" target="_blank" rel="noopener noreferrer">
                 <CalendarCheck className="w-5 h-5 mr-2" /> Rezerviraj maskotu
               </a>
             </Button>
