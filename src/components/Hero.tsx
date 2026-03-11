@@ -31,7 +31,7 @@ const Hero = () => {
 
           {/* Service labels */}
           <div className="flex flex-wrap justify-center gap-2 mb-6">
-            {["SUBSOCCER", "MASKOTE", "PENALTY CHALLENGE", "NAPUHANAC"].map((label) => (
+            {["SUBSOCCER", "MASKOTE", "PENALTY CHALLENGE NAPUHANAC"].map((label) => (
               <span key={label} className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-bold tracking-wider border border-white/30">
                 {label}
               </span>
