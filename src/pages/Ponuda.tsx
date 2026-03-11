@@ -44,7 +44,7 @@ const Ponuda = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Najam <span className="text-primary">maskote</span> <span className="text-muted-foreground text-xl">(Stitch, Elsa, Super Mario)</span></h2>
-            <p className="text-2xl font-extrabold text-primary mb-2">80 €</p>
+            <p className="text-2xl font-extrabold text-primary mb-2">70 €</p>
             <p className="text-muted-foreground mb-6">Naša najpopularnija maskota Stitch oduševljava najmlađe i donosi osmijehe na svaku proslavu! Uz Stitcha, u ponudi imamo i Elsu iz Frozena te Super Maria — odaberite omiljenog lika za svoj poseban dan.</p>
             <p className="font-semibold text-foreground mb-2">U cijenu je uključeno:</p>
             <ul className="space-y-3 mb-4">
