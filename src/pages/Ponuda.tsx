@@ -8,7 +8,7 @@ import stitchImg from "@/assets/stitch-mascot-2.jpg";
 import elsaImg from "@/assets/elsa-mascot.jpg";
 import marioImg from "@/assets/mario-mascot.jpg";
 import subsoccerImg from "@/assets/subsoccer-table-2.jpg";
-import subsoccerImg2 from "@/assets/stitch-mascot-4.jpg";
+import subsoccerImg2 from "@/assets/subsoccer-front.jpg";
 import customImg from "@/assets/custom-mascots.jpg";
 import customImgMain from "@/assets/mascots-collection.jpg";
 import buySubsoccerImg from "@/assets/subsoccer-buy.png";
