@@ -51,7 +51,7 @@ const Hero = () => {
           </h1>
           <p className="text-base md:text-lg max-w-2xl mx-auto mb-8 opacity-90">Zabava koja dolazi na vaš događaj — maskote, SubSoccer i još mnogo toga! Oduševite goste i stvorite nezaboravne uspomene.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 md:mt-12">
             <Button size="lg" className="rounded-full bg-secondary hover:bg-secondary/90 text-secondary-foreground text-lg px-8 font-bold shadow-xl" onClick={() => openDialog("reserve")}>
               <CalendarCheck className="w-5 h-5 mr-2" /> Rezerviraj sada
             </Button>
