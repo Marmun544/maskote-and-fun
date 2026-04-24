@@ -42,13 +42,13 @@ const Hero = () => {
             ))}
           </div>
           
-          <span className="inline-block bg-secondary/90 text-secondary-foreground px-4 py-1 rounded-full text-sm font-bold mb-6">
-            🎭✨ Zabava za svaki poseban trenutak
-          </span>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight mt-2 md:mt-0">
             Učini poseban trenutak<br />
             <span className="text-sunshine">još posebnijim</span>
           </h1>
+          <span className="inline-block bg-secondary/90 text-secondary-foreground px-4 py-1 rounded-full text-sm font-bold mb-6 mt-[35vh] sm:mt-0 order-last sm:order-none">
+            🎭✨ Zabava za svaki poseban trenutak
+          </span>
           <p className="text-base md:text-lg max-w-2xl mx-auto mb-8 opacity-90">Zabava koja dolazi na vaš događaj — maskote, SubSoccer i još mnogo toga! Oduševite goste i stvorite nezaboravne uspomene.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-[60vh] sm:mt-8 md:mt-12">
