@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { CalendarCheck, MessageCircle, CheckCircle } from "lucide-react";
 import PricingCTA from "@/components/PricingCTA";
+import ServiceInquiryForm from "@/components/ServiceInquiryForm";
 import stitchImg from "@/assets/stitch-mascot-2.jpg";
 import elsaImg from "@/assets/elsa-mascot.jpg";
 import marioImg from "@/assets/mario-mascot.jpg";
@@ -196,6 +197,7 @@ const Ponuda = () => {
       </div>
     </section>
 
+    <ServiceInquiryForm />
     <PricingCTA />
   </main>
   );
