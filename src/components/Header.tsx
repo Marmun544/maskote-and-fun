@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 const navItems = [
   { label: "Početna", path: "/" },
   { label: "Ponuda", path: "/ponuda" },
+  { label: "Kalkulacija", path: "/kalkulacija" },
   { label: "Galerija", path: "/galerija" },
   { label: "Kontakt", path: "/kontakt" },
 ];
