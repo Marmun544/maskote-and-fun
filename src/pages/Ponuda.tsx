@@ -197,6 +197,7 @@ const Ponuda = () => {
       </div>
     </section>
 
+    <ServiceInquiryForm />
     <PricingCTA />
   </main>
   );
