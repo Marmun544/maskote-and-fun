@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Index from "./pages/Index";
 import Ponuda from "./pages/Ponuda";
+import Kalkulacija from "./pages/Kalkulacija";
 import Galerija from "./pages/Galerija";
 import Kontakt from "./pages/Kontakt";
 import NotFound from "./pages/NotFound";
@@ -26,6 +27,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/ponuda" element={<Ponuda />} />
+          <Route path="/kalkulacija" element={<Kalkulacija />} />
           <Route path="/galerija" element={<Galerija />} />
           <Route path="/kontakt" element={<Kontakt />} />
           <Route path="*" element={<NotFound />} />
