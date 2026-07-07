@@ -9,14 +9,14 @@ import { useToast } from "@/hooks/use-toast";
 import { MessageCircle, CalendarCheck } from "lucide-react";
 import { z } from "zod";
 
-type Service = "SubSoccer" | "Penalty Challenge";
+type Service = "SubSoccer" | "Penalty Challenge" | "Nogometna kombinacija";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Unesite ime").max(100),
   contact: z.string().trim().min(5, "Unesite kontakt").max(150),
   date: z.string().trim().max(50).optional().or(z.literal("")),
   days: z.number().int().min(1).max(30),
-  service: z.enum(["SubSoccer", "Penalty Challenge"]),
+  service: z.enum(["SubSoccer", "Penalty Challenge", "Nogometna kombinacija"]),
   message: z.string().trim().max(1000).optional().or(z.literal("")),
 });
 
@@ -25,6 +25,10 @@ const calcPrice = (service: Service, days: number) => {
     if (days <= 1) return 80;
     if (days === 2) return 140;
     return 140 + (days - 2) * 70;
+  }
+  if (service === "Nogometna kombinacija") {
+    // SubSoccer + Penalty Challenge s popustom od 20 € po danu
+    return calcPrice("SubSoccer", days) + 90 * days - 20 * days;
   }
   // Penalty Challenge — fiksna cijena po danu/eventu
   return 90 * days;
@@ -106,9 +110,9 @@ const ServiceInquiryForm = () => {
               <RadioGroup
                 value={service}
                 onValueChange={(v) => setService(v as Service)}
-                className="grid grid-cols-1 sm:grid-cols-2 gap-3"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"
               >
-                {(["SubSoccer", "Penalty Challenge"] as Service[]).map((s) => (
+                {(["SubSoccer", "Penalty Challenge", "Nogometna kombinacija"] as Service[]).map((s) => (
                   <label
                     key={s}
                     htmlFor={`svc-${s}`}
@@ -122,7 +126,11 @@ const ServiceInquiryForm = () => {
                     <div>
                       <p className="font-bold">{s}</p>
                       <p className="text-xs text-muted-foreground">
-                        {s === "SubSoccer" ? "80 €/dan · 2 dana 140 €" : "90 € po danu"}
+                        {s === "SubSoccer"
+                          ? "80 €/dan · 2 dana 140 €"
+                          : s === "Penalty Challenge"
+                            ? "90 € po danu"
+                            : "150 €/dan · ušteda 20 €"}
                       </p>
                     </div>
                   </label>
