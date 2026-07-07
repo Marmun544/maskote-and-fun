@@ -1,6 +1,6 @@
 /maskote-and-fun
  ├─ public/
- │   └─ moj_logo.png
+ │   └─ moj_logo2.png
  ├─ src/
  ├─ index.html
  ├─ vite.config.ts
