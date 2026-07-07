@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { CalendarCheck, MessageCircle, CheckCircle } from "lucide-react";
+import { CalendarCheck, MessageCircle, CheckCircle, Sparkles } from "lucide-react";
 import PricingCTA from "@/components/PricingCTA";
 import stitchImg from "@/assets/stitch-mascot-2.jpg";
 import elsaImg from "@/assets/elsa-mascot.jpg";
