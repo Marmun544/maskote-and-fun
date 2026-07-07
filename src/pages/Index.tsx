@@ -17,6 +17,7 @@ const Index = () => (
     <Hero />
     <ServicesPreview />
     <VideoSection videos={homepageVideos} />
+    <ComboOffer />
     <WhoItsFor />
     <WhyUs />
     <PricingCTA />
