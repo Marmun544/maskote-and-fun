@@ -4,7 +4,7 @@ import { CalendarCheck, CheckCircle, Sparkles } from "lucide-react";
 import comboImg from "@/assets/nogometna-kombinacija.jpg.asset.json";
 
 const ComboOffer = () => (
-  <section className="py-20 bg-background">
+  <section className="py-12 md:py-20 bg-background">
     <div className="container mx-auto px-4">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <motion.div
@@ -15,10 +15,10 @@ const ComboOffer = () => (
           <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary font-bold px-4 py-2 rounded-full mb-4">
             <Sparkles className="w-4 h-4" /> Najbolja vrijednost
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4">
             Nogometna <span className="text-primary">kombinacija</span> ⚽
           </h2>
-          <p className="text-2xl font-extrabold text-primary mb-2">150 € / dan</p>
+          <p className="text-xl md:text-2xl font-extrabold text-primary mb-2">150 € / dan</p>
           <p className="text-muted-foreground mb-4">
             Uzmite najam SubSoccera i Penalty Challenge napuhanca zajedno po povoljnijoj cijeni! 
             Savršeno za sportske rođendane, školske dane, sportske evente i team buildinge.
@@ -37,7 +37,7 @@ const ComboOffer = () => (
               </li>
             ))}
           </ul>
-          <Button asChild size="lg" className="rounded-full bg-secondary hover:bg-secondary/90 font-bold">
+          <Button asChild size="lg" className="rounded-full bg-secondary hover:bg-secondary/90 font-bold w-full sm:w-auto">
             <a
               href="https://wa.me/385919419053?text=Pozdrav%2C%20želim%20rezervirati%20Nogometnu%20kombinaciju%20(SubSoccer%20%2B%20Penalty%20Challenge)!"
               target="_blank"
@@ -56,7 +56,7 @@ const ComboOffer = () => (
           <img
             src={comboImg.url}
             alt="Nogometna kombinacija - SubSoccer i Penalty Challenge"
-            className="rounded-2xl w-full h-80 lg:h-[28rem] object-cover shadow-lg"
+            className="rounded-2xl w-full h-64 md:h-80 lg:h-[28rem] object-cover shadow-lg"
             loading="lazy"
           />
         </motion.div>
