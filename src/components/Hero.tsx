@@ -15,7 +15,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden bg-black">
+    <section className="relative min-h-screen flex items-start md:items-center justify-center overflow-hidden bg-black">
       {/* Background */}
       <div className="absolute inset-0">
         <img
@@ -27,7 +27,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pb-24 pt-8 md:pb-32 md:pt-12">
+      <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-[48vh] pb-8 md:pt-0 md:pb-32">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
