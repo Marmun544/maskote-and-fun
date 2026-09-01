@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { CalendarCheck } from "lucide-react";
-import heroImg from "@/assets/hero-main-new.jpg";
+import heroAsset from "@/assets/hero-promo.jpg.asset.json";
 import WhatsAppChoiceDialog from "@/components/WhatsAppChoiceDialog";
 
 const Hero = () => {
@@ -15,43 +15,44 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-start md:items-center justify-center overflow-hidden bg-black">
       {/* Background */}
-      <div className="absolute inset-0 bg-primary">
+      <div className="absolute inset-0">
         <img
-          src={heroImg}
-          alt="Maskote, Subsoccer & More zabava"
+          src={heroAsset.url}
+          alt="Nogometne igre najam - SubSoccer i Penalty Challenge"
           className="w-full h-full object-contain object-center md:object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary/50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-[55vh] pb-12 sm:pt-12 sm:pb-32 md:pt-12 md:pb-32">
+      <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-[48vh] pb-8 md:pt-0 md:pb-32">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}>
-
+          transition={{ duration: 0.8 }}
+        >
           {/* Service labels */}
-          <div className="flex flex-wrap justify-center gap-2 mb-4 sm:mb-6">
+          <div className="flex flex-wrap justify-center gap-2 mb-6 md:mb-8">
             {["SUBSOCCER", "MASKOTE", "PENALTY CHALLENGE NAPUHANAC"].map((label) => (
               <span key={label} className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-bold tracking-wider border border-white/30">
                 {label}
               </span>
             ))}
           </div>
-          
-          <span className="inline-block bg-secondary/90 text-secondary-foreground px-4 py-1 rounded-full text-sm font-bold mb-4 sm:mb-6">
+
+          <span className="inline-block bg-secondary/90 text-secondary-foreground px-4 py-1 rounded-full text-sm font-bold mb-4 md:mb-6">
             🎭✨ Zabava za svaki poseban trenutak
           </span>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-5 leading-tight">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-5 leading-tight mt-2">
             Učini poseban trenutak<br />
             <span className="text-sunshine">još posebnijim</span>
           </h1>
-          <p className="text-base md:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 opacity-90">Zabava koja dolazi na vaš događaj — maskote, SubSoccer i još mnogo toga! Oduševite goste i stvorite nezaboravne uspomene.
+          <p className="text-base md:text-lg max-w-2xl mx-auto mb-6 md:mb-8 opacity-90">
+            Zabava koja dolazi na vaš događaj — maskote, SubSoccer i još mnogo toga! Oduševite goste i stvorite nezaboravne uspomene.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4 sm:mt-8 md:mt-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 md:mt-12">
             <Button size="lg" className="rounded-full bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 font-bold shadow-xl font-sans text-2xl text-left" onClick={() => openDialog("reserve")}>
               <CalendarCheck className="w-5 h-5 mr-2" /> Rezerviraj sada
             </Button>
@@ -71,8 +72,8 @@ const Hero = () => {
       </div>
 
       <WhatsAppChoiceDialog open={dialogOpen} onOpenChange={setDialogOpen} variant={dialogVariant} />
-    </section>);
-
+    </section>
+  );
 };
 
 export default Hero;
