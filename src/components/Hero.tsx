@@ -33,16 +33,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {/* Service labels */}
-          <div className="flex flex-wrap justify-center gap-2 mb-6 md:mb-8">
-            {["SUBSOCCER", "MASKOTE", "PENALTY CHALLENGE NAPUHANAC"].map((label) => (
-              <span key={label} className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-bold tracking-wider border border-white/30">
-                {label}
-              </span>
-            ))}
-          </div>
-
-          <span className="inline-block bg-secondary/90 text-secondary-foreground px-4 py-1 rounded-full text-sm font-bold mb-4 md:mb-6">
+          <span className="inline-block bg-secondary/90 text-secondary-foreground px-4 py-1 rounded-full text-sm font-bold mb-4 md:mb-6 mt-2">
             🎭✨ Zabava za svaki poseban trenutak
           </span>
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-5 leading-tight mt-2">
