@@ -21,13 +21,13 @@ const Hero = () => {
         <img
           src={heroAsset.url}
           alt="Nogometne igre najam - SubSoccer i Penalty Challenge"
-          className="w-full h-full object-contain object-center md:object-cover"
+          className="w-full h-full object-contain object-top md:object-cover md:object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/70" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-[62vh] pb-6 md:pt-0 md:pb-32">
+      <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-[48vh] pb-6 md:pt-0 md:pb-32">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
