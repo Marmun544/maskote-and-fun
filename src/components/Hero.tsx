@@ -27,20 +27,20 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-[54vh] pb-8 md:pt-0 md:pb-32">
+      <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-[62vh] pb-6 md:pt-0 md:pb-32">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="inline-block bg-secondary/90 text-secondary-foreground px-4 py-1 rounded-full text-sm font-bold mb-4 md:mb-6 mt-2">
+          <span className="inline-block bg-secondary/90 text-secondary-foreground px-3 py-1 rounded-full text-xs md:text-sm font-bold mb-3 md:mb-6 mt-1">
             🎭✨ Zabava za svaki poseban trenutak
           </span>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-5 leading-tight mt-2">
+          <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-5 leading-tight">
             Učini poseban trenutak<br />
             <span className="text-sunshine">još posebnijim</span>
           </h1>
-          <p className="text-base md:text-lg max-w-2xl mx-auto mb-6 md:mb-8 opacity-90">
+          <p className="text-sm md:text-lg max-w-2xl mx-auto mb-5 md:mb-8 opacity-90">
             Zabava koja dolazi na vaš događaj — maskote, SubSoccer i još mnogo toga! Oduševite goste i stvorite nezaboravne uspomene.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 md:mt-12">
