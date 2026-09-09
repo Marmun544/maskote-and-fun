@@ -26,21 +26,42 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/70" />
       </div>
 
+      {/* Festive confetti background behind lower content */}
+      <div className="absolute bottom-0 left-0 right-0 h-[55vh] md:h-[45%] z-[1] pointer-events-none overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-t from-sky-100/95 via-sky-50/90 to-transparent" />
+        <svg className="absolute inset-0 w-full h-full opacity-60" preserveAspectRatio="none" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="confetti" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+              <rect x="10" y="5" width="6" height="10" fill="hsl(14 100% 64%)" transform="rotate(25 13 10)" />
+              <circle cx="55" cy="15" r="4" fill="hsl(199 96% 55%)" />
+              <rect x="35" y="25" width="7" height="7" fill="hsl(45 100% 60%)" transform="rotate(15 38 28)" />
+              <path d="M65 40 l6 6 l-6 6 l-6 -6 z" fill="hsl(330 90% 65%)" />
+              <circle cx="20" cy="55" r="3" fill="hsl(142 70% 50%)" />
+              <rect x="50" y="60" width="5" height="11" fill="hsl(199 96% 55%)" transform="rotate(-20 52 65)" />
+              <path d="M5 75 l5 5 l-5 5 l-5 -5 z" fill="hsl(45 100% 60%)" />
+              <circle cx="75" cy="70" r="4" fill="hsl(14 100% 64%)" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#confetti)" />
+        </svg>
+      </div>
+
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-[48vh] pb-6 md:pt-0 md:pb-32">
+      <div className="relative z-10 container mx-auto px-4 text-center md:text-primary-foreground pt-[48vh] pb-6 md:pt-0 md:pb-32">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          className="inline-block rounded-3xl bg-black/40 md:bg-transparent px-4 py-4 md:px-0 md:py-0 backdrop-blur-sm md:backdrop-blur-none"
         >
           <span className="inline-block bg-secondary/90 text-secondary-foreground px-3 py-1 rounded-full text-xs md:text-sm font-bold mb-3 md:mb-6 mt-1">
             🎭✨ Zabava za svaki poseban trenutak
           </span>
-          <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-5 leading-tight">
+          <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-5 leading-tight text-primary-foreground">
             Učini poseban trenutak<br />
             <span className="text-sunshine">još posebnijim</span>
           </h1>
-          <p className="text-sm md:text-lg max-w-2xl mx-auto mb-5 md:mb-8 opacity-90">
+          <p className="text-sm md:text-lg max-w-2xl mx-auto mb-5 md:mb-8 opacity-90 text-primary-foreground">
             Zabava koja dolazi na vaš događaj — maskote, SubSoccer i još mnogo toga! Oduševite goste i stvorite nezaboravne uspomene.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 md:mt-12">
