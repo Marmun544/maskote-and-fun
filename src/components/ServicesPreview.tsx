@@ -1,9 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import stitchImg from "@/assets/stitch-mascot-2.jpg";
-import elsaImg from "@/assets/elsa-mascot.jpg";
-import marioImg from "@/assets/mario-mascot.jpg";
+import mascotsCollectionImg from "@/assets/mascots-collection-new.jpg.asset.json";
 import subsoccerImg from "@/assets/stitch-mascot-4.jpg";
 import customImg from "@/assets/mascots-collection.jpg";
 import buySubsoccerImg from "@/assets/subsoccer-buy.png";
