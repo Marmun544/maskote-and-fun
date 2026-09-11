@@ -21,7 +21,7 @@ const Hero = () => {
         <img
           src={heroAsset.url}
           alt="Nogometne igre najam - SubSoccer i Penalty Challenge"
-          className="w-full h-full object-cover object-[center_65%] md:object-cover md:object-center"
+          className="w-full h-full object-contain object-[center_30%] md:object-cover md:object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/70" />
       </div>
