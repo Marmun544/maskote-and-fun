@@ -167,7 +167,7 @@ const Ponuda = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Penalty Challenge – <span className="text-primary">nogometni napuhanac ⚽</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Penalty Challenge - nogometni izazov <span className="text-primary">⚽</span></h2>
             <p className="text-2xl font-extrabold text-primary mb-2">90 €</p>
             <p className="text-muted-foreground mb-4">Dodajte pravu nogometnu atmosferu svom događaju uz naš Penalty Challenge napuhanac! Savršena atrakcija za djecu i odrasle koji žele testirati svoju preciznost i zabaviti se uz natjecanje u pucanju penala.</p>
             <p className="text-muted-foreground mb-4">Igra je jednostavna – ciljajte rupe na golu i skupite što više bodova! Idealno za rođendane, proslave, školske događaje, sportske dane, team buildinge i razne evente na otvorenom.</p>
