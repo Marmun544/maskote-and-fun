@@ -15,15 +15,15 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-start md:items-center justify-center overflow-hidden bg-black">
+    <section className="relative min-h-screen flex items-start md:items-center justify-center overflow-hidden bg-white md:bg-black">
       {/* Background */}
-      <div className="absolute inset-0 flex items-center justify-center md:block">
+      <div className="absolute inset-0 flex items-start justify-center md:block">
         <img
           src={heroAsset.url}
           alt="Nogometne igre najam - SubSoccer i Penalty Challenge"
-          className="w-full h-full object-contain object-center md:object-cover md:object-center"
+          className="w-full h-full object-contain object-top md:object-cover md:object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/60" />
       </div>
 
       {/* Festive confetti background behind lower content */}
