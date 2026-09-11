@@ -9,13 +9,12 @@ import penaltyImg from "@/assets/penalty-challenge.png";
 
 const services = [
   {
-    title: "Najam maskote (Stitch, Elsa, Super Mario)",
-    desc: "Maskote koje oduševljavaju najmlađe — Stitch, Elsa i Super Mario dolaze na vašu proslavu!",
-    img: stitchImg,
-    images: [stitchImg, elsaImg, marioImg],
+    title: "Najam maskote (Stitch, PAW Patrol, Yamal and more)",
+    desc: "Maskote koje oduševljavaju djecu svih uzrasta — Stitch, Chase iz PAW Patrola, Yamal i mnogi drugi dolaze na vašu proslavu!",
+    img: mascotsCollectionImg.url,
     color: "from-primary/80 to-sky/60",
     overlay: null,
-    link: "/ponuda#stitch-maskota",
+    link: "/ponuda#najam-maskote",
   },
   {
     title: "Najam SubSoccer stola",
