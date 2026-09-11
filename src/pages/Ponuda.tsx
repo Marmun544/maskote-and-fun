@@ -22,6 +22,56 @@ const useImageSwap = (interval = 2000) => {
   return index;
 };
 
+const SubSoccerImageSwap = () => {
+  const index = useImageSwap();
+  const images = [
+    { src: subsoccerImg.url, alt: "SubSoccer Wembley Stadium stol s djecom na turniru" },
+    { src: subsoccerImg2.url, alt: "SubSoccer stol na travnjaku s djecom" },
+  ];
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      className="order-2 lg:order-1 relative rounded-2xl w-full h-80 shadow-lg overflow-hidden"
+    >
+      {images.map((img, i) => (
+        <img
+          key={img.src}
+          src={img.src}
+          alt={img.alt}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${i === index ? "opacity-100" : "opacity-0"}`}
+        />
+      ))}
+    </motion.div>
+  );
+};
+
+const PenaltyImageSwap = () => {
+  const index = useImageSwap();
+  const images = [
+    { src: penaltyImg, alt: "Penalty Challenge napuhanac" },
+    { src: penaltyImg2.url, alt: "Penalty Challenge napuhanac na travnjaku" },
+  ];
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: 30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      className="relative rounded-2xl w-full h-80 shadow-lg overflow-hidden"
+    >
+      {images.map((img, i) => (
+        <img
+          key={img.src}
+          src={img.src}
+          alt={img.alt}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${i === index ? "opacity-100" : "opacity-0"}`}
+        />
+      ))}
+    </motion.div>
+  );
+};
+
 const Ponuda = () => {
   const { hash } = useLocation();
 
