@@ -81,9 +81,7 @@ const Ponuda = () => {
     <section id="subsoccer-najam" className="py-20 bg-muted scroll-mt-24">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-2 lg:order-1">
-            <img src={subsoccerImg.url} alt="SubSoccer Wembley Stadium stol s djecom na turniru" className="rounded-2xl w-full h-80 object-cover shadow-lg" />
-          </motion.div>
+          <SubSoccerImageSwap />
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-1 lg:order-2">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Najam <span className="text-primary">SubSoccera</span></h2>
             <p className="text-2xl font-extrabold text-primary mb-2">80 € / dan &nbsp;|&nbsp; 2 dana — 140 €</p>
