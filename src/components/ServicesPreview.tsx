@@ -15,6 +15,7 @@ const services = [
     title: "Najam maskote (Stitch, PAW Patrol, Yamal and more)",
     desc: "Maskote koje oduševljavaju djecu svih uzrasta — Stitch, Chase iz PAW Patrola, Yamal i mnogi drugi dolaze na vašu proslavu!",
     imgs: [mascotsCollectionImg.url],
+    imgPosition: "object-[center_20%]",
     link: "/ponuda#najam-maskote",
   },
   {
@@ -53,7 +54,7 @@ const useImageSwap = (count: number, interval = 2000) => {
   return index;
 };
 
-const ServiceCardImages = ({ imgs, alt }: { imgs: string[]; alt: string }) => {
+const ServiceCardImages = ({ imgs, alt, imgPosition = "object-center" }: { imgs: string[]; alt: string; imgPosition?: string }) => {
   const index = useImageSwap(imgs.length);
   return (
     <div className="relative h-56 overflow-hidden">
@@ -62,7 +63,7 @@ const ServiceCardImages = ({ imgs, alt }: { imgs: string[]; alt: string }) => {
           key={src}
           src={src}
           alt={alt}
-          className={`absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-all duration-500 ${i === index ? "opacity-100" : "opacity-0"}`}
+          className={`absolute inset-0 w-full h-full object-cover ${imgPosition} group-hover:scale-110 transition-all duration-500 ${i === index ? "opacity-100" : "opacity-0"}`}
         />
       ))}
     </div>
@@ -91,7 +92,7 @@ const ServicesPreview = () => (
             transition={{ delay: i * 0.15 }}
             className="group rounded-2xl overflow-hidden bg-card shadow-md hover:shadow-xl transition-all hover:-translate-y-2"
           >
-            <ServiceCardImages imgs={s.imgs} alt={s.title} />
+            <ServiceCardImages imgs={s.imgs} alt={s.title} imgPosition={s.imgPosition} />
             <div className="p-6">
               <h3 className="text-xl font-bold mb-2">{s.title}</h3>
               <p className="text-muted-foreground text-sm mb-4">{s.desc}</p>
