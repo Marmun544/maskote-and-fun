@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -6,10 +6,71 @@ import { CalendarCheck, MessageCircle, CheckCircle, Sparkles } from "lucide-reac
 import PricingCTA from "@/components/PricingCTA";
 import mascotsCollectionImg from "@/assets/mascots-collection-new.jpg.asset.json";
 import subsoccerImg from "@/assets/subsoccer-wembley.jpg.asset.json";
+import subsoccerImg2 from "@/assets/subsoccer-wembley-2.jpg.asset.json";
 import customImg from "@/assets/custom-mascots.jpg";
 import customImgMain from "@/assets/mascots-collection.jpg";
 import buySubsoccerImg from "@/assets/subsoccer-buy.png";
 import penaltyImg from "@/assets/penalty-challenge.png";
+import penaltyImg2 from "@/assets/penalty-challenge-2.jpg.asset.json";
+
+const useImageSwap = (interval = 2000) => {
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const timer = setInterval(() => setIndex((i) => (i === 0 ? 1 : 0)), interval);
+    return () => clearInterval(timer);
+  }, [interval]);
+  return index;
+};
+
+const SubSoccerImageSwap = () => {
+  const index = useImageSwap();
+  const images = [
+    { src: subsoccerImg.url, alt: "SubSoccer Wembley Stadium stol s djecom na turniru" },
+    { src: subsoccerImg2.url, alt: "SubSoccer stol na travnjaku s djecom" },
+  ];
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      className="order-2 lg:order-1 relative rounded-2xl w-full h-80 shadow-lg overflow-hidden"
+    >
+      {images.map((img, i) => (
+        <img
+          key={img.src}
+          src={img.src}
+          alt={img.alt}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${i === index ? "opacity-100" : "opacity-0"}`}
+        />
+      ))}
+    </motion.div>
+  );
+};
+
+const PenaltyImageSwap = () => {
+  const index = useImageSwap();
+  const images = [
+    { src: penaltyImg, alt: "Penalty Challenge napuhanac" },
+    { src: penaltyImg2.url, alt: "Penalty Challenge napuhanac na travnjaku" },
+  ];
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: 30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      className="relative rounded-2xl w-full h-80 shadow-lg overflow-hidden"
+    >
+      {images.map((img, i) => (
+        <img
+          key={img.src}
+          src={img.src}
+          alt={img.alt}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${i === index ? "opacity-100" : "opacity-0"}`}
+        />
+      ))}
+    </motion.div>
+  );
+};
 
 const Ponuda = () => {
   const { hash } = useLocation();
@@ -70,9 +131,7 @@ const Ponuda = () => {
     <section id="subsoccer-najam" className="py-20 bg-muted scroll-mt-24">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-2 lg:order-1">
-            <img src={subsoccerImg.url} alt="SubSoccer Wembley Stadium stol s djecom na turniru" className="rounded-2xl w-full h-80 object-cover shadow-lg" />
-          </motion.div>
+          <SubSoccerImageSwap />
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-1 lg:order-2">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Najam <span className="text-primary">SubSoccera</span></h2>
             <p className="text-2xl font-extrabold text-primary mb-2">80 € / dan &nbsp;|&nbsp; 2 dana — 140 €</p>
@@ -108,7 +167,7 @@ const Ponuda = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Penalty Challenge – <span className="text-primary">nogometni napuhanac ⚽</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Penalty Challenge - nogometni izazov <span className="text-primary">⚽</span></h2>
             <p className="text-2xl font-extrabold text-primary mb-2">90 €</p>
             <p className="text-muted-foreground mb-4">Dodajte pravu nogometnu atmosferu svom događaju uz naš Penalty Challenge napuhanac! Savršena atrakcija za djecu i odrasle koji žele testirati svoju preciznost i zabaviti se uz natjecanje u pucanju penala.</p>
             <p className="text-muted-foreground mb-4">Igra je jednostavna – ciljajte rupe na golu i skupite što više bodova! Idealno za rođendane, proslave, školske događaje, sportske dane, team buildinge i razne evente na otvorenom.</p>
@@ -128,9 +187,7 @@ const Ponuda = () => {
               </a>
             </Button>
           </motion.div>
-          <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <img src={penaltyImg} alt="Penalty Challenge napuhanac" className="rounded-2xl w-full h-80 object-cover shadow-lg" />
-          </motion.div>
+          <PenaltyImageSwap />
         </div>
       </div>
     </section>
