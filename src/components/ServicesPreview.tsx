@@ -73,17 +73,7 @@ const ServicesPreview = () => (
             className="group rounded-2xl overflow-hidden bg-card shadow-md hover:shadow-xl transition-all hover:-translate-y-2"
           >
             <div className="relative h-56 overflow-hidden">
-            {"images" in s && s.images ? (
-              <div className="grid grid-cols-3 gap-1 h-56">
-                {s.images.map((img, idx) => (
-                  <img key={idx} src={img} alt={`${s.title} ${idx + 1}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                ))}
-              </div>
-            ) : (
-              <div className="relative h-56 overflow-hidden">
-                <img src={s.img} alt={s.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-              </div>
-            )}
+              <img src={s.img} alt={s.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold mb-2">{s.title}</h3>
