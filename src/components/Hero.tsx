@@ -17,11 +17,11 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-start md:items-center justify-center overflow-hidden bg-black">
       {/* Background */}
-      <div className="absolute inset-0 flex items-center justify-center md:block">
+      <div className="absolute inset-0">
         <img
           src={heroAsset.url}
           alt="Nogometne igre najam - SubSoccer i Penalty Challenge"
-          className="w-full h-full object-contain object-center scale-[0.78] translate-y-6 md:scale-100 md:translate-y-0 md:object-cover md:object-center"
+          className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/70" />
       </div>

@@ -121,7 +121,7 @@ const Ponuda = () => {
             </Button>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <img src={mascotsCollectionImg.url} alt="Stitch, PAW Patrol Chase i Yamal maskote" className="rounded-2xl w-full h-auto object-cover shadow-lg" />
+            <img src={mascotsCollectionImg.url} alt="Stitch, PAW Patrol Chase i Yamal maskote" className="rounded-2xl w-full h-auto object-cover object-[center_25%] shadow-lg" />
           </motion.div>
         </div>
       </div>
