@@ -35,14 +35,14 @@ const Ponuda = () => {
       </div>
     </section>
 
-    {/* Stitch Mascot */}
-    <section id="stitch-maskota" className="py-20 bg-background scroll-mt-24">
+    {/* Mascot rental */}
+    <section id="najam-maskote" className="py-20 bg-background scroll-mt-24">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Najam <span className="text-primary">maskote</span> <span className="text-muted-foreground text-xl">(Stitch, Elsa, Super Mario)</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Najam <span className="text-primary">maskote</span> <span className="text-muted-foreground text-xl">(Stitch, PAW Patrol, Yamal and more)</span></h2>
             <p className="text-2xl font-extrabold text-primary mb-2">70 €</p>
-            <p className="text-muted-foreground mb-6">Naša najpopularnija maskota Stitch oduševljava najmlađe i donosi osmijehe na svaku proslavu! Uz Stitcha, u ponudi imamo i Elsu iz Frozena te Super Maria — odaberite omiljenog lika za svoj poseban dan.</p>
+            <p className="text-muted-foreground mb-6">U ponudi imamo omiljene likove koji oduševljavaju djecu svih uzrasta — veseli Stitch, hrabri Chase iz PAW Patrola, nogometna zvijezda Yamal i mnogi drugi! Odaberite omiljenog junaka i učinite rođendan, proslavu ili event nezaboravnim.</p>
             <p className="font-semibold text-foreground mb-2">U cijenu je uključeno:</p>
             <ul className="space-y-3 mb-4">
               {["Dolazak na lokaciju", "Druženje s djecom", "Ples i animacija", "Slikanje / fotografiranje", "Dijeljenje slatkiša"].map((item) => (
@@ -59,10 +59,8 @@ const Ponuda = () => {
               </a>
             </Button>
           </motion.div>
-          <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="grid grid-cols-3 gap-3">
-            <img src={stitchImg} alt="Stitch maskota" className="rounded-2xl w-full h-56 object-cover" />
-            <img src={elsaImg} alt="Elsa maskota" className="rounded-2xl w-full h-56 object-cover" />
-            <img src={marioImg} alt="Super Mario maskota" className="rounded-2xl w-full h-56 object-cover" />
+          <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            <img src={mascotsCollectionImg.url} alt="Stitch, PAW Patrol Chase i Yamal maskote" className="rounded-2xl w-full h-auto object-cover shadow-lg" />
           </motion.div>
         </div>
       </div>
