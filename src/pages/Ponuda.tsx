@@ -187,9 +187,7 @@ const Ponuda = () => {
               </a>
             </Button>
           </motion.div>
-          <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <img src={penaltyImg} alt="Penalty Challenge napuhanac" className="rounded-2xl w-full h-80 object-cover shadow-lg" />
-          </motion.div>
+          <PenaltyImageSwap />
         </div>
       </div>
     </section>
