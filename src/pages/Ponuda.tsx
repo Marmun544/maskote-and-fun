@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -6,10 +6,21 @@ import { CalendarCheck, MessageCircle, CheckCircle, Sparkles } from "lucide-reac
 import PricingCTA from "@/components/PricingCTA";
 import mascotsCollectionImg from "@/assets/mascots-collection-new.jpg.asset.json";
 import subsoccerImg from "@/assets/subsoccer-wembley.jpg.asset.json";
+import subsoccerImg2 from "@/assets/subsoccer-wembley-2.jpg.asset.json";
 import customImg from "@/assets/custom-mascots.jpg";
 import customImgMain from "@/assets/mascots-collection.jpg";
 import buySubsoccerImg from "@/assets/subsoccer-buy.png";
 import penaltyImg from "@/assets/penalty-challenge.png";
+import penaltyImg2 from "@/assets/penalty-challenge-2.jpg.asset.json";
+
+const useImageSwap = (interval = 2000) => {
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const timer = setInterval(() => setIndex((i) => (i === 0 ? 1 : 0)), interval);
+    return () => clearInterval(timer);
+  }, [interval]);
+  return index;
+};
 
 const Ponuda = () => {
   const { hash } = useLocation();
