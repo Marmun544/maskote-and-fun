@@ -28,7 +28,7 @@ const Hero = () => {
 
       {/* Festive confetti background behind lower content */}
       <div className="absolute bottom-0 left-0 right-0 h-[55vh] md:h-[45%] z-[1] pointer-events-none overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-sky-100/95 via-sky-50/90 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/95 to-white/90 md:from-sky-100/95 md:via-sky-50/90 md:to-transparent" />
         <svg className="absolute inset-0 w-full h-full opacity-60" preserveAspectRatio="none" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="confetti" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
