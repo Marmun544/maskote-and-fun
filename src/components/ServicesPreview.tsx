@@ -1,54 +1,73 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import mascotsCollectionImg from "@/assets/mascots-collection-new.jpg.asset.json";
-import subsoccerImg from "@/assets/stitch-mascot-4.jpg";
+import subsoccerImg from "@/assets/subsoccer-wembley.jpg.asset.json";
+import subsoccerImg2 from "@/assets/subsoccer-wembley-2.jpg.asset.json";
 import customImg from "@/assets/mascots-collection.jpg";
 import buySubsoccerImg from "@/assets/subsoccer-buy.png";
 import penaltyImg from "@/assets/penalty-challenge.png";
+import penaltyImg2 from "@/assets/penalty-challenge-2.jpg.asset.json";
 
 const services = [
   {
     title: "Najam maskote (Stitch, PAW Patrol, Yamal and more)",
     desc: "Maskote koje oduševljavaju djecu svih uzrasta — Stitch, Chase iz PAW Patrola, Yamal i mnogi drugi dolaze na vašu proslavu!",
-    img: mascotsCollectionImg.url,
-    color: "from-primary/80 to-sky/60",
-    overlay: null,
+    imgs: [mascotsCollectionImg.url],
     link: "/ponuda#najam-maskote",
   },
   {
     title: "Najam SubSoccer stola",
     desc: "Jedinstveni nogometni stol koji zabavlja sve generacije i unosi energiju u svaku zabavu.",
-    img: subsoccerImg,
-    color: "from-mint/80 to-primary/60",
-    overlay: null,
+    imgs: [subsoccerImg.url, subsoccerImg2.url],
     link: "/ponuda#subsoccer-najam",
   },
   {
-    title: "Penalty Challenge – nogometni napuhanac ⚽",
+    title: "Penalty Challenge - nogometni izazov ⚽",
     desc: "Napuhanac za pucanje penala – savršena zabava za djecu i odrasle na svakom događaju!",
-    img: penaltyImg,
-    color: "from-secondary/80 to-primary/60",
-    overlay: null,
+    imgs: [penaltyImg, penaltyImg2.url],
     link: "/ponuda#penalty-challenge",
   },
   {
     title: "Naruči svoj SubSoccer ⚽",
     desc: "Želiš SubSoccer stol kod kuće ili u uredu? Sada ga možeš naručiti!",
-    img: buySubsoccerImg,
-    color: "from-primary/80 to-mint/60",
-    overlay: null,
+    imgs: [buySubsoccerImg],
     link: "/ponuda#subsoccer-kupnja",
   },
   {
     title: "Naruči svoju maskotu",
     desc: "Želite svoju jedinstvenu maskotu? Dizajniramo i izrađujemo po vašim željama.",
-    img: customImg,
-    color: "from-secondary/80 to-coral/60",
-    overlay: null,
+    imgs: [customImg],
     link: "/ponuda#custom-maskota",
   },
 ];
+
+const useImageSwap = (count: number, interval = 2000) => {
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    if (count < 2) return;
+    const timer = setInterval(() => setIndex((i) => (i + 1) % count), interval);
+    return () => clearInterval(timer);
+  }, [count, interval]);
+  return index;
+};
+
+const ServiceCardImages = ({ imgs, alt }: { imgs: string[]; alt: string }) => {
+  const index = useImageSwap(imgs.length);
+  return (
+    <div className="relative h-56 overflow-hidden">
+      {imgs.map((src, i) => (
+        <img
+          key={src}
+          src={src}
+          alt={alt}
+          className={`absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-all duration-500 ${i === index ? "opacity-100" : "opacity-0"}`}
+        />
+      ))}
+    </div>
+  );
+};
 
 const ServicesPreview = () => (
   <section className="py-20 bg-muted">
@@ -72,9 +91,7 @@ const ServicesPreview = () => (
             transition={{ delay: i * 0.15 }}
             className="group rounded-2xl overflow-hidden bg-card shadow-md hover:shadow-xl transition-all hover:-translate-y-2"
           >
-            <div className="relative h-56 overflow-hidden">
-              <img src={s.img} alt={s.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-            </div>
+            <ServiceCardImages imgs={s.imgs} alt={s.title} />
             <div className="p-6">
               <h3 className="text-xl font-bold mb-2">{s.title}</h3>
               <p className="text-muted-foreground text-sm mb-4">{s.desc}</p>
