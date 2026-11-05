@@ -95,7 +95,7 @@ const ServicesPreview = () => (
             transition={{ delay: i * 0.15 }}
             className="group rounded-2xl overflow-hidden bg-card shadow-md hover:shadow-xl transition-all hover:-translate-y-2"
           >
-            <ServiceCardImages imgs={s.imgs} alt={s.title} imgPosition={s.imgPosition} />
+            <ServiceCardImages imgs={s.imgs} alt={s.title} imgPosition={s.imgPosition} interval={s.interval} />
             <div className="p-6">
               <h3 className="text-xl font-bold mb-2">{s.title}</h3>
               <p className="text-muted-foreground text-sm mb-4">{s.desc}</p>
