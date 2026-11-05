@@ -57,8 +57,8 @@ const useImageSwap = (count: number, interval = 2000) => {
   return index;
 };
 
-const ServiceCardImages = ({ imgs, alt, imgPosition = "object-center" }: { imgs: string[]; alt: string; imgPosition?: string }) => {
-  const index = useImageSwap(imgs.length);
+const ServiceCardImages = ({ imgs, alt, imgPosition = "object-center", interval = 2000 }: { imgs: string[]; alt: string; imgPosition?: string; interval?: number }) => {
+  const index = useImageSwap(imgs.length, interval);
   return (
     <div className="relative h-56 overflow-hidden">
       {imgs.map((src, i) => (
