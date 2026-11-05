@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import mascotsCollectionImg from "@/assets/mascots-birthday.jpg.asset.json";
+import mascotsPawImg from "@/assets/maskota-paw-patrol.png.asset.json";
+import mascotsYamalImg from "@/assets/maskota-yamal.png.asset.json";
 import subsoccerImg from "@/assets/subsoccer-wembley.jpg.asset.json";
 import subsoccerImg2 from "@/assets/subsoccer-wembley-2.jpg.asset.json";
 import customImg from "@/assets/mascots-collection.jpg";
@@ -10,12 +12,13 @@ import buySubsoccerImg from "@/assets/subsoccer-buy.png";
 import penaltyImg from "@/assets/penalty-challenge.png";
 import penaltyImg2 from "@/assets/penalty-challenge-2.jpg.asset.json";
 
-const services = [
+const services: { title: string; desc: string; imgs: string[]; imgPosition?: string; interval?: number; link: string }[] = [
   {
     title: "Najam maskote (Stitch, PAW Patrol, Yamal and more)",
     desc: "Maskote koje oduševljavaju djecu svih uzrasta — Stitch, Chase iz PAW Patrola, Yamal i mnogi drugi dolaze na vašu proslavu!",
-    imgs: [mascotsCollectionImg.url],
+    imgs: [mascotsCollectionImg.url, mascotsPawImg.url, mascotsYamalImg.url],
     imgPosition: "object-[center_25%]",
+    interval: 5000,
     link: "/ponuda#najam-maskote",
   },
   {
@@ -54,8 +57,8 @@ const useImageSwap = (count: number, interval = 2000) => {
   return index;
 };
 
-const ServiceCardImages = ({ imgs, alt, imgPosition = "object-center" }: { imgs: string[]; alt: string; imgPosition?: string }) => {
-  const index = useImageSwap(imgs.length);
+const ServiceCardImages = ({ imgs, alt, imgPosition = "object-center", interval = 2000 }: { imgs: string[]; alt: string; imgPosition?: string; interval?: number }) => {
+  const index = useImageSwap(imgs.length, interval);
   return (
     <div className="relative h-56 overflow-hidden">
       {imgs.map((src, i) => (
@@ -92,7 +95,7 @@ const ServicesPreview = () => (
             transition={{ delay: i * 0.15 }}
             className="group rounded-2xl overflow-hidden bg-card shadow-md hover:shadow-xl transition-all hover:-translate-y-2"
           >
-            <ServiceCardImages imgs={s.imgs} alt={s.title} imgPosition={s.imgPosition} />
+            <ServiceCardImages imgs={s.imgs} alt={s.title} imgPosition={s.imgPosition} interval={s.interval} />
             <div className="p-6">
               <h3 className="text-xl font-bold mb-2">{s.title}</h3>
               <p className="text-muted-foreground text-sm mb-4">{s.desc}</p>
