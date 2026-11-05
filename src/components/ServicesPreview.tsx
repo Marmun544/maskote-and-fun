@@ -12,7 +12,7 @@ import buySubsoccerImg from "@/assets/subsoccer-buy.png";
 import penaltyImg from "@/assets/penalty-challenge.png";
 import penaltyImg2 from "@/assets/penalty-challenge-2.jpg.asset.json";
 
-const services = [
+const services: { title: string; desc: string; imgs: string[]; imgPosition?: string; interval?: number; link: string }[] = [
   {
     title: "Najam maskote (Stitch, PAW Patrol, Yamal and more)",
     desc: "Maskote koje oduševljavaju djecu svih uzrasta — Stitch, Chase iz PAW Patrola, Yamal i mnogi drugi dolaze na vašu proslavu!",
