@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import mascotsCollectionImg from "@/assets/mascots-birthday.jpg.asset.json";
+import mascotsPawImg from "@/assets/maskota-paw-patrol.png.asset.json";
+import mascotsYamalImg from "@/assets/maskota-yamal.png.asset.json";
 import subsoccerImg from "@/assets/subsoccer-wembley.jpg.asset.json";
 import subsoccerImg2 from "@/assets/subsoccer-wembley-2.jpg.asset.json";
 import customImg from "@/assets/mascots-collection.jpg";
