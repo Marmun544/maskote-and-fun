@@ -58,9 +58,31 @@ const useImageSwap = (count: number, interval = 2000) => {
 };
 
 const ServiceCardImages = ({ imgs, alt, imgPosition = "object-center", interval = 2000 }: { imgs: string[]; alt: string; imgPosition?: string; interval?: number }) => {
-  const index = useImageSwap(imgs.length, interval);
+  const ref = useRef<HTMLDivElement>(null);
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (imgs.length < 2 || !el) return;
+    let timer: number | undefined;
+    const io = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setIndex(0);
+        timer = window.setInterval(() => setIndex((i) => (i + 1) % imgs.length), interval);
+      } else if (timer) {
+        clearInterval(timer);
+        timer = undefined;
+      }
+    }, { threshold: 0.3 });
+    io.observe(el);
+    return () => {
+      io.disconnect();
+      if (timer) clearInterval(timer);
+    };
+  }, [imgs.length, interval]);
+
   return (
-    <div className="relative h-56 overflow-hidden">
+    <div ref={ref} className="relative h-56 overflow-hidden">
       {imgs.map((src, i) => (
         <img
           key={src}
