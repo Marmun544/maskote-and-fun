@@ -47,16 +47,6 @@ const services: { title: string; desc: string; imgs: string[]; imgPosition?: str
   },
 ];
 
-const useImageSwap = (count: number, interval = 2000) => {
-  const [index, setIndex] = useState(0);
-  useEffect(() => {
-    if (count < 2) return;
-    const timer = setInterval(() => setIndex((i) => (i + 1) % count), interval);
-    return () => clearInterval(timer);
-  }, [count, interval]);
-  return index;
-};
-
 const ServiceCardImages = ({ imgs, alt, imgPosition = "object-center", interval = 2000 }: { imgs: string[]; alt: string; imgPosition?: string; interval?: number }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [index, setIndex] = useState(0);
