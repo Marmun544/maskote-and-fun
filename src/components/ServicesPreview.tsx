@@ -16,8 +16,9 @@ const services = [
   {
     title: "Najam maskote (Stitch, PAW Patrol, Yamal and more)",
     desc: "Maskote koje oduševljavaju djecu svih uzrasta — Stitch, Chase iz PAW Patrola, Yamal i mnogi drugi dolaze na vašu proslavu!",
-    imgs: [mascotsCollectionImg.url],
+    imgs: [mascotsCollectionImg.url, mascotsPawImg.url, mascotsYamalImg.url],
     imgPosition: "object-[center_25%]",
+    interval: 5000,
     link: "/ponuda#najam-maskote",
   },
   {
