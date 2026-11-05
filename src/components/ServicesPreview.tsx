@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import mascotsCollectionImg from "@/assets/mascots-collection-new.jpg.asset.json";
+import mascotsCollectionImg from "@/assets/mascots-birthday.jpg.asset.json";
 import subsoccerImg from "@/assets/subsoccer-wembley.jpg.asset.json";
 import subsoccerImg2 from "@/assets/subsoccer-wembley-2.jpg.asset.json";
 import customImg from "@/assets/mascots-collection.jpg";
@@ -15,7 +15,7 @@ const services = [
     title: "Najam maskote (Stitch, PAW Patrol, Yamal and more)",
     desc: "Maskote koje oduševljavaju djecu svih uzrasta — Stitch, Chase iz PAW Patrola, Yamal i mnogi drugi dolaze na vašu proslavu!",
     imgs: [mascotsCollectionImg.url],
-    imgPosition: "object-[center_20%]",
+    imgPosition: "object-[center_25%]",
     link: "/ponuda#najam-maskote",
   },
   {
